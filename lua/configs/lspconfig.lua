@@ -1,10 +1,10 @@
--- EXAMPLE 
+-- EXAMPLE
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = {"tsserver", "tailwindcss", "eslint", "cssls", "lua_ls" }
+local servers = { "ts_ls", "tailwindcss", "eslint", "cssls", "lua_ls" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -16,10 +16,8 @@ for _, lsp in ipairs(servers) do
 end
 
 -- typescript
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
 }
-
-
