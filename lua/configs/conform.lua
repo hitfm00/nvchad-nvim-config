@@ -13,7 +13,7 @@ local options = {
     typescriptreact = { "prettier", "eslint_d" },
   },
 
-  format_on_save = {
+  format_after_save = {
     timeout_ms = 1000,
     lsp_fallback = true,
     async = true,
